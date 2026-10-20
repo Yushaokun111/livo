@@ -1,0 +1,28 @@
+{
+  "length": 2200.0,
+  "inner_diameter": 5.0,
+  "wall_thickness": 0.20,
+  "ring_spacing": 1.5,
+  "sleeper_spacing": 0.6,
+  "track_gauge": 1.435,
+  "light_spacing": 6.0,
+  "light_intensity": 1.0,
+  "ambient": 0.16,
+  "texture_contrast": 0.12,
+  "radial_segments": 128,
+  "seed": 7,
+  "design_speed_kmh": 80,
+  "chunk_length": 50.0,
+  "mesh_step": 2.0,
+  "alignment": [
+    {"type": "straight", "length": 400.0},
+    {"type": "transition_in", "length": 80.0, "radius": 600, "direction": 1, "cant_mm": 120},
+    {"type": "arc", "length": 400.0, "radius": 600, "direction": 1, "cant_mm": 120},
+    {"type": "transition_out", "length": 80.0, "radius": 600, "direction": 1, "cant_mm": 120},
+    {"type": "straight", "length": 400.0},
+    {"type": "transition_in", "length": 80.0, "radius": 800, "direction": -1, "cant_mm": 95},
+    {"type": "arc", "length": 400.0, "radius": 800, "direction": -1, "cant_mm": 95},
+    {"type": "transition_out", "length": 80.0, "radius": 800, "direction": -1, "cant_mm": 95},
+    {"type": "straight", "length": 280.0}
+  ]
+}

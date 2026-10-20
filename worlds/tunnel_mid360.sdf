@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.9">
+  <world name="metro_tunnel">
+    <physics name="physics" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>0.25</real_time_factor>
+    </physics>
+    <gravity>0 0 -9.81</gravity>
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics" />
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands" />
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster" />
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu" />
+    <scene>
+      <ambient>0.16 0.16 0.16 1</ambient>
+      <background>0.015 0.015 0.02 1</background>
+      <shadows>false</shadows>
+      <grid>false</grid>
+    </scene>
+    <include>
+      <uri>model://metro_tunnel</uri>
+    </include>
+    <model name="test_quad">
+      <include>
+        <uri>model://iris_with_standoffs</uri>
+      </include>
+      <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
+    </plugin>
+      <plugin filename="gz-sim-lift-drag-system" name="gz::sim::systems::LiftDrag">
+        <a0>0.3</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.2500</cla>
+        <cda>0.10</cda>
+        <cma>0.0</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <area>0.002</area>
+        <air_density>1.2041</air_density>
+        <cp>0.084 0 0</cp>
+        <forward>0 1 0</forward>
+        <upward>0 0 1</upward>
+        <link_name>iris_with_standoffs::rotor_0</link_name>
+      </plugin>
+      <plugin filename="gz-sim-lift-drag-system" name="gz::sim::systems::LiftDrag">
+        <a0>0.3</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.2500</cla>
+        <cda>0.10</cda>
+        <cma>0.0</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <area>0.002</area>
+        <air_density>1.2041</air_density>
+        <cp>-0.084 0 0</cp>
+        <forward>0 -1 0</forward>
+        <upward>0 0 1</upward>
+        <link_name>iris_with_standoffs::rotor_0</link_name>
+      </plugin>
+      <plugin filename="gz-sim-lift-drag-system" name="gz::sim::systems::LiftDrag">
+        <a0>0.3</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.2500</cla>
+        <cda>0.10</cda>
+        <cma>0.0</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <area>0.002</area>
+        <air_density>1.2041</air_density>
+        <cp>0.084 0 0</cp>
+        <forward>0 1 0</forward>
+        <upward>0 0 1</upward>
+        <link_name>iris_with_standoffs::rotor_1</link_name>
+      </plugin>
+      <plugin filename="gz-sim-lift-drag-system" name="gz::sim::systems::LiftDrag">
+        <a0>0.3</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.2500</cla>
+        <cda>0.10</cda>
+        <cma>0.0</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <area>0.002</area>
+        <air_density>1.2041</air_density>
+        <cp>-0.084 0 0</cp>
+        <forward>0 -1 0</forward>
+        <upward>0 0 1</upward>
+        <link_name>iris_with_standoffs::rotor_1</link_name>
+      </plugin>
+      <plugin filename="gz-sim-lift-drag-system" name="gz::sim::systems::LiftDrag">
+        <a0>0.3</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.2500</cla>
+        <cda>0.10</cda>
+        <cma>0.0</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <area>0.002</area>
+        <air_density>1.2041</air_density>
+        <cp>0.084 0 0</cp>
+        <forward>0 -1 0</forward>
+        <upward>0 0 1</upward>
+        <link_name>iris_with_standoffs::rotor_2</link_name>
+      </plugin>
+      <plugin filename="gz-sim-lift-drag-system" name="gz::sim::systems::LiftDrag">
+        <a0>0.3</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.2500</cla>
+        <cda>0.10</cda>
+        <cma>0.0</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <area>0.002</area>
+        <air_density>1.2041</air_density>
+        <cp>-0.084 0 0</cp>
+        <forward>0 1 0</forward>
+        <upward>0 0 1</upward>
+        <link_name>iris_with_standoffs::rotor_2</link_name>
+      </plugin>
+      <plugin filename="gz-sim-lift-drag-system" name="gz::sim::systems::LiftDrag">
+        <a0>0.3</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.2500</cla>
+        <cda>0.10</cda>
+        <cma>0.0</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <area>0.002</area>
+        <air_density>1.2041</air_density>
+        <cp>0.084 0 0</cp>
+        <forward>0 -1 0</forward>
+        <upward>0 0 1</upward>
+        <link_name>iris_with_standoffs::rotor_3</link_name>
+      </plugin>
+      <plugin filename="gz-sim-lift-drag-system" name="gz::sim::systems::LiftDrag">
+        <a0>0.3</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.2500</cla>
+        <cda>0.10</cda>
+        <cma>0.0</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <area>0.002</area>
+        <air_density>1.2041</air_density>
+        <cp>-0.084 0 0</cp>
+        <forward>0 1 0</forward>
+        <upward>0 0 1</upward>
+        <link_name>iris_with_standoffs::rotor_3</link_name>
+      </plugin>
+      <plugin filename="gz-sim-apply-joint-force-system" name="gz::sim::systems::ApplyJointForce">
+        <joint_name>iris_with_standoffs::rotor_0_joint</joint_name>
+      </plugin>
+      <plugin filename="gz-sim-apply-joint-force-system" name="gz::sim::systems::ApplyJointForce">
+        <joint_name>iris_with_standoffs::rotor_1_joint</joint_name>
+      </plugin>
+      <plugin filename="gz-sim-apply-joint-force-system" name="gz::sim::systems::ApplyJointForce">
+        <joint_name>iris_with_standoffs::rotor_2_joint</joint_name>
+      </plugin>
+      <plugin filename="gz-sim-apply-joint-force-system" name="gz::sim::systems::ApplyJointForce">
+        <joint_name>iris_with_standoffs::rotor_3_joint</joint_name>
+      </plugin>
+      <plugin name="ArduPilotPlugin" filename="ArduPilotPlugin">
+        <fdm_addr>127.0.0.1</fdm_addr>
+        <fdm_port_in>19002</fdm_port_in>
+        <connectionTimeoutMaxCount>5</connectionTimeoutMaxCount>
+        <lock_step>1</lock_step>
+        <no_time_sync>0</no_time_sync>
+        <have_32_channels>0</have_32_channels>
+        <modelXYZToAirplaneXForwardZDown degrees="true">0 0 0 180 0 0</modelXYZToAirplaneXForwardZDown>
+        <gazeboXYZToNED degrees="true">0 0 0 180 0 0</gazeboXYZToNED>
+        <imuName>iris_with_standoffs::imu_link::imu_sensor</imuName>
+        <control channel="0">
+          <jointName>iris_with_standoffs::rotor_0_joint</jointName>
+          <useForce>1</useForce>
+          <multiplier>838</multiplier>
+          <offset>0</offset>
+          <servo_min>1100</servo_min>
+          <servo_max>1900</servo_max>
+          <type>VELOCITY</type>
+          <p_gain>0.20</p_gain>
+          <i_gain>0</i_gain>
+          <d_gain>0</d_gain>
+          <i_max>0</i_max>
+          <i_min>0</i_min>
+          <cmd_max>2.5</cmd_max>
+          <cmd_min>-2.5</cmd_min>
+          <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+        </control>
+        <control channel="1">
+          <jointName>iris_with_standoffs::rotor_1_joint</jointName>
+          <useForce>1</useForce>
+          <multiplier>838</multiplier>
+          <offset>0</offset>
+          <servo_min>1100</servo_min>
+          <servo_max>1900</servo_max>
+          <type>VELOCITY</type>
+          <p_gain>0.20</p_gain>
+          <i_gain>0</i_gain>
+          <d_gain>0</d_gain>
+          <i_max>0</i_max>
+          <i_min>0</i_min>
+          <cmd_max>2.5</cmd_max>
+          <cmd_min>-2.5</cmd_min>
+          <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+        </control>
+        <control channel="2">
+          <jointName>iris_with_standoffs::rotor_2_joint</jointName>
+          <useForce>1</useForce>
+          <multiplier>-838</multiplier>
+          <offset>0</offset>
+          <servo_min>1100</servo_min>
+          <servo_max>1900</servo_max>
+          <type>VELOCITY</type>
+          <p_gain>0.20</p_gain>
+          <i_gain>0</i_gain>
+          <d_gain>0</d_gain>
+          <i_max>0</i_max>
+          <i_min>0</i_min>
+          <cmd_max>2.5</cmd_max>
+          <cmd_min>-2.5</cmd_min>
+          <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+        </control>
+        <control channel="3">
+          <jointName>iris_with_standoffs::rotor_3_joint</jointName>
+          <useForce>1</useForce>
+          <multiplier>-838</multiplier>
+          <offset>0</offset>
+          <servo_min>1100</servo_min>
+          <servo_max>1900</servo_max>
+          <type>VELOCITY</type>
+          <p_gain>0.20</p_gain>
+          <i_gain>0</i_gain>
+          <d_gain>0</d_gain>
+          <i_max>0</i_max>
+          <i_min>0</i_min>
+          <cmd_max>2.5</cmd_max>
+          <cmd_min>-2.5</cmd_min>
+          <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+        </control>
+      </plugin>
+      <pose>100.5 0 0.205 0 0 0</pose>
+      <link name="mid360_link">
+        <pose>0 0 0.18 3.141592653589793 0 0</pose>
+        <inertial>
+          <mass>0.265</mass>
+          <inertia>
+            <ixx>0.00018</ixx>
+            <iyy>0.00018</iyy>
+            <izz>0.00018</izz>
+          </inertia>
+        </inertial>
+        <visual name="mid360_housing">
+          <geometry>
+            <box>
+              <size>.065 .065 .06</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>.15 .15 .17 1</diffuse>
+          </material>
+        </visual>
+        <sensor name="mid360_range_image" type="gpu_lidar">
+          <topic>/mid360/range_image</topic>
+          <always_on>true</always_on>
+          <update_rate>50</update_rate>
+          <lidar>
+            <scan>
+              <horizontal>
+                <samples>1801</samples>
+                <resolution>1</resolution>
+                <min_angle>-3.141592653589793</min_angle>
+                <max_angle>3.141592653589793</max_angle>
+              </horizontal>
+              <vertical>
+                <samples>120</samples>
+                <resolution>1</resolution>
+                <min_angle>-0.12217304763960307</min_angle>
+                <max_angle>0.9075712110370514</max_angle>
+              </vertical>
+            </scan>
+            <range>
+              <min>0.1</min>
+              <max>40</max>
+              <resolution>0.002</resolution>
+            </range>
+          </lidar>
+        </sensor>
+        <sensor name="mid360_imu" type="imu">
+          <topic>/mid360/imu</topic>
+          <always_on>true</always_on>
+          <update_rate>200</update_rate>
+        </sensor>
+      </link>
+      <joint name="mid360_mount" type="fixed">
+        <parent>iris_with_standoffs::base_link</parent>
+        <child>mid360_link</child>
+      </joint>
+    </model>
+  </world>
+</sdf>

@@ -1,0 +1,107 @@
+[
+  {
+    "path": ".",
+    "commit": "92b0cd788ec29406f26c6f9c31d5ceedbd1cc538",
+    "origin": "https://github.com/ArduPilot/ardupilot.git"
+  },
+  {
+    "path": "modules/waf",
+    "commit": "35eadbb64e2052099a853b571e507c33032b392c",
+    "origin": "https://github.com/ArduPilot/waf.git"
+  },
+  {
+    "path": "modules/gbenchmark",
+    "commit": "d572f4777349d43653b21d6c2fc63020ab326db2",
+    "origin": "https://github.com/google/benchmark.git"
+  },
+  {
+    "path": "modules/mavlink",
+    "commit": "bb87bc7390af7f21d9ad33a45c8be02997fecd24",
+    "origin": "https://github.com/ArduPilot/mavlink"
+  },
+  {
+    "path": "modules/mavlink/pymavlink",
+    "commit": "8ba67079211a4315681bc84a44c37b383448d664",
+    "origin": "https://github.com/ArduPilot/pymavlink.git"
+  },
+  {
+    "path": "modules/gtest",
+    "commit": "c5fed93f941865a0e912e9baf46ded713506590a",
+    "origin": "https://github.com/ArduPilot/googletest"
+  },
+  {
+    "path": "modules/ChibiOS",
+    "commit": "88b84600b59d2f39c9d9137aacdc9f098b374b4a",
+    "origin": "https://github.com/ArduPilot/ChibiOS.git"
+  },
+  {
+    "path": "modules/gsoap",
+    "commit": "e1f690585d4803402584962bfaa8240ecaf1db30",
+    "origin": "https://github.com/ArduPilot/gsoap"
+  },
+  {
+    "path": "modules/DroneCAN/DSDL",
+    "commit": "0856687a5acb42b55d29bbad8f4fc9e19b4989fc",
+    "origin": "https://github.com/DroneCAN/DSDL.git"
+  },
+  {
+    "path": "modules/CrashDebug",
+    "commit": "599965086437137ec0fe66e185611f43f335f889",
+    "origin": "https://github.com/ardupilot/CrashDebug"
+  },
+  {
+    "path": "modules/CrashDebug/mri",
+    "commit": "b35c89451b41a45b7f5b580acaff555315ac88e2",
+    "origin": "https://github.com/ardupilot/mri.git"
+  },
+  {
+    "path": "modules/CrashDebug/mri/CppUTest",
+    "commit": "011f371fdb5d7e441fb023be67295783e053df4a",
+    "origin": "https://github.com/ardupilot/CppUTest.git"
+  },
+  {
+    "path": "modules/CrashDebug/CrashCatcher",
+    "commit": "4cf6e11df3a081b0f573a7834ed8e1e4000af73e",
+    "origin": "https://github.com/ardupilot/CrashCatcher.git"
+  },
+  {
+    "path": "modules/CrashDebug/CrashCatcher/CppUTest",
+    "commit": "011f371fdb5d7e441fb023be67295783e053df4a",
+    "origin": "https://github.com/ardupilot/CppUTest.git"
+  },
+  {
+    "path": "modules/DroneCAN/pydronecan",
+    "commit": "1f494e9a56ac9930f1e11c2f453789414b10d54e",
+    "origin": "https://github.com/DroneCAN/pydronecan"
+  },
+  {
+    "path": "modules/DroneCAN/dronecan_dsdlc",
+    "commit": "43d8a9ed909e18f169c001a0f418edc72269b36b",
+    "origin": "https://github.com/DroneCAN/dronecan_dsdlc"
+  },
+  {
+    "path": "modules/DroneCAN/libcanard",
+    "commit": "9b05a4d8eebf82684053d07e6d04fe2b0c922a6e",
+    "origin": "https://github.com/DroneCAN/libcanard"
+  },
+  {
+    "path": "modules/DroneCAN/libcanard/drivers/avr/avr-can-lib",
+    "commit": "9c6bc9118de66d6edaf1b8539e2b9717ba26d123",
+    "origin": "https://github.com/rennerm/avr-can-lib"
+  },
+  {
+    "path": "modules/Micro-XRCE-DDS-Client",
+    "commit": "97175304425c5bee87c6fddd99de1ef8d0c394dc",
+    "origin": "https://github.com/ardupilot/Micro-XRCE-DDS-Client.git"
+  },
+  {
+    "path": "modules/Micro-CDR",
+    "commit": "3d1b17703c7cf4f22def2910bc845bdb5152d7b5",
+    "origin": "https://github.com/ardupilot/Micro-CDR.git"
+  },
+  {
+    "path": "modules/lwip",
+    "commit": "143a6a5cb8023921b5dced55c30551ffb752b640",
+    "origin": "https://github.com/ArduPilot/lwip.git"
+  }
+]

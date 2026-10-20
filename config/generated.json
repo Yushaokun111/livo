@@ -1,0 +1,142 @@
+{
+  "length": 2200.0,
+  "inner_diameter": 5.0,
+  "wall_thickness": 0.2,
+  "ring_spacing": 1.5,
+  "sleeper_spacing": 0.6,
+  "track_gauge": 1.435,
+  "light_spacing": 6.0,
+  "light_intensity": 1.0,
+  "ambient": 0.16,
+  "texture_contrast": 0.12,
+  "radial_segments": 128,
+  "seed": 7,
+  "design_speed_kmh": 80,
+  "chunk_length": 50.0,
+  "mesh_step": 2.0,
+  "alignment": [
+    {
+      "type": "straight",
+      "length": 400.0
+    },
+    {
+      "type": "transition_in",
+      "length": 80.0,
+      "radius": 600,
+      "direction": 1,
+      "cant_mm": 120
+    },
+    {
+      "type": "arc",
+      "length": 400.0,
+      "radius": 600,
+      "direction": 1,
+      "cant_mm": 120
+    },
+    {
+      "type": "transition_out",
+      "length": 80.0,
+      "radius": 600,
+      "direction": 1,
+      "cant_mm": 120
+    },
+    {
+      "type": "straight",
+      "length": 400.0
+    },
+    {
+      "type": "transition_in",
+      "length": 80.0,
+      "radius": 800,
+      "direction": -1,
+      "cant_mm": 95
+    },
+    {
+      "type": "arc",
+      "length": 400.0,
+      "radius": 800,
+      "direction": -1,
+      "cant_mm": 95
+    },
+    {
+      "type": "transition_out",
+      "length": 80.0,
+      "radius": 800,
+      "direction": -1,
+      "cant_mm": 95
+    },
+    {
+      "type": "straight",
+      "length": 280.0
+    }
+  ],
+  "axis_center_z": 2.1,
+  "rail_top_z": 0.25,
+  "camera_station": 520.0,
+  "camera_pose": [
+    519.7555501099415,
+    5.793515744654278,
+    1.55,
+    0,
+    0.035,
+    0.1336533571657212
+  ],
+  "light_count": 734,
+  "sleeper_count": 3666,
+  "chunk_count": 44,
+  "end_pose": [
+    1933.461086228776,
+    817.4685213040515,
+    0,
+    0,
+    0,
+    0.2003715082848777
+  ],
+  "segment_stations": [
+    {
+      "type": "straight",
+      "start": 0.0,
+      "end": 400.0
+    },
+    {
+      "type": "transition_in",
+      "start": 400.0,
+      "end": 480.0
+    },
+    {
+      "type": "arc",
+      "start": 480.0,
+      "end": 880.0
+    },
+    {
+      "type": "transition_out",
+      "start": 880.0,
+      "end": 960.0
+    },
+    {
+      "type": "straight",
+      "start": 960.0,
+      "end": 1360.0
+    },
+    {
+      "type": "transition_in",
+      "start": 1360.0,
+      "end": 1440.0
+    },
+    {
+      "type": "arc",
+      "start": 1440.0,
+      "end": 1840.0
+    },
+    {
+      "type": "transition_out",
+      "start": 1840.0,
+      "end": 1920.0
+    },
+    {
+      "type": "straight",
+      "start": 1920.0,
+      "end": 2200.0
+    }
+  ]
+}

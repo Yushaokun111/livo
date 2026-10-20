@@ -1,0 +1,49 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index e091f3a..5a5784e 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -9,7 +9,8 @@ endif()
+  ADD_COMPILE_OPTIONS(-std=c++17) 
+  set(CMAKE_CXX_FLAGS "-std=c++17 -O3") 
+   
+- add_definitions(-DROOT_DIR=\"${CMAKE_CURRENT_SOURCE_DIR}/\") 
++ # Keep every run's mapping logs and PCDs in the caller's run directory.
++ add_definitions(-DROOT_DIR=\"./\")
+   
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fexceptions") 
+  set(CMAKE_CXX_STANDARD 17) 
+diff --git a/src/laserMapping.cpp b/src/laserMapping.cpp
+index d441261..b9405a8 100644
+--- a/src/laserMapping.cpp
++++ b/src/laserMapping.cpp
+@@ -631,7 +631,12 @@ void publish_odometry(const rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPt
+     odomAftMapped.child_frame_id = "body";
+     odomAftMapped.header.stamp = get_ros_time(lidar_end_time);
+     set_posestamp(odomAftMapped.pose);
+-    pubOdomAftMapped->publish(odomAftMapped);
++    // Odometry twist is expressed in child_frame_id (body), as ROS specifies.
++    // Expose the estimator velocity for MAVLink ExternalNav, not a truth source.
++    const V3D body_velocity = state_point.rot.inverse() * state_point.vel;
++    odomAftMapped.twist.twist.linear.x = body_velocity.x();
++    odomAftMapped.twist.twist.linear.y = body_velocity.y();
++    odomAftMapped.twist.twist.linear.z = body_velocity.z();
+     auto P = kf.get_P();
+     for (int i = 0; i < 6; i ++)
+     {
+@@ -644,6 +649,7 @@ void publish_odometry(const rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPt
+         odomAftMapped.pose.covariance[i*6 + 5] = P(k, 2);
+     }
+ 
++    pubOdomAftMapped->publish(odomAftMapped);
+     geometry_msgs::msg::TransformStamped trans;
+     trans.header.frame_id = "camera_init";
+     trans.header.stamp = odomAftMapped.header.stamp;
+@@ -944,7 +950,7 @@ public:
+ 
+         map_save_srv_ = this->create_service<std_srvs::srv::Trigger>("map_save", std::bind(&LaserMappingNode::map_save_callback, this, std::placeholders::_1, std::placeholders::_2));
+ 
+-        RCLCPP_INFO(this->get_logger(), "Node init finished.");
++        RCLCPP_INFO(this->get_logger(), "Node init finished. ExternalNav body velocity output enabled (livo-v1).");
+     }
+ 
+     ~LaserMappingNode()
